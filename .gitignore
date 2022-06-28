@@ -6,3 +6,4 @@ statics/*
 package-lock.json
 build/*
 .gitmodules
+NikkoMesina.bundle
