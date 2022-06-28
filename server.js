@@ -9,8 +9,7 @@ global.events = new Events();
 global.log = log;
 const Package = require('./package/handler');
 
+module.exports = (async () => {
+  return (await Package.install(__dirname)).$app;
+})()
 
-const singleton = async () => {
-  await Package.install(__dirname);
-} 
-singleton();

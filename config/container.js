@@ -38,7 +38,9 @@ module.exports = {
         'routers': 'container/services/RouterServiceProvider',
         'auth': 'container/services/AuthServiceProvider',
         'sockets': 'container/services/SocketServiceProvider',
-        // 'Mailer': 'container/services/MailerServiceProvider', // ->> enable this if you wish to provide email services
+        'conversion': 'container/services/ConversionServiceProvider',
+        'transformer': 'container/services/TransformerServiceProvider',
+        
     },
 
     /**
@@ -55,6 +57,10 @@ module.exports = {
          * be installed to that Chasi Route MWs Repository,
          * then you can use it in your routes
          */
+        'conversion-limit': "/middlewares/conversion-limit.mw.js",
+        'conversion-types': "/middlewares/conversion-types.mw.js",
+        'item-limit': "/middlewares/default-item-limit.mw.js",
+        
     }
 
 }

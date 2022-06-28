@@ -139,7 +139,7 @@ class PackageHandler extends Negotiator(Injector, ErrorHandler) {
 
     this.$app.use((req, res, next) => {
       if(this.property['error-responses'].hasOwnProperty('404')) {
-        res.send(this.property['error-responses']['404']);
+        res.status(404).send(this.property['error-responses']['404']);
       } else {
         res.send(this.property['error-responses']._default);
       }

@@ -10,24 +10,6 @@ class RouterServiceProvider {
                 ControllerDir   : ['controllers/'],
                 middleware      : [],
                 AuthRouteExceptions   : []
-            }),
-
-            new Router({
-                name            : 'chasi',
-                prefix          : '/chasi',
-                namespace       : '/http/chasi.js',
-                ControllerDir   : ['controllers/'],
-                middleware      : [],
-                AuthRouteExceptions   : []
-            }),
-
-            new Router({
-                name            : 'web',
-                prefix          : '/',
-                namespace       : '/http/web.js',
-                ControllerDir   : ['controllers/'],
-                middleware      : [],
-                AuthRouteExceptions   : []
             })
         ]
     }

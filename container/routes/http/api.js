@@ -13,5 +13,16 @@ module.exports = function() {
     * [AuthRouteExceptions] array option.
     */
 
-    route.post('/login', "UserController@login");
+    route.group({group: "conversions", prefix: "conversions"}, (() => {
+        route.group({group: "conversion_type", prefix: ":type", middleware: ['conversion-types']}, (() => {
+
+            route.post("convert/:value", "ConversionController@convert").middleware('conversion-limit');
+
+            route.post("recent", "ConversionController@recent").middleware('item-limit');
+            route.post("recent/:items", "ConversionController@recent");
+
+            route.post("top", "ConversionController@top").middleware('item-limit');
+            route.post("top/:items", "ConversionController@top");
+        }));
+    }));
 }

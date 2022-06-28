@@ -2,7 +2,7 @@ const Base = require("../base");
 const pluralize = require("pluralize")
 const mongoose = require("mongoose")
 
-class Model extends Base{
+class Model extends Base {
     static modelPath = 'container/Models/';
     static models = {};
     static container;

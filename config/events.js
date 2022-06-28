@@ -19,6 +19,7 @@ module.exports = {
   events: {
     'authorized': 'container/events/AuthorizedEvent',
     'build-compiler': 'container/events/BuildCompiler',
+    'conversion': 'container/events/ConversionEvent',
   },
 
   /**
