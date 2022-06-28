@@ -2,7 +2,7 @@
 
 * clone this repo via the bundle pack
 ```
-> git clone nikkomesina.bundle ./
+> git clone nikkomesina.bundle <path>
 ```
 * npm install 
 > please do not yet install in production mode, as it will ignore the dev dependencies, and test automation will not work.
